@@ -1,34 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <dos.h>
+#include <unistd.h>
 
-int custom_pow(int number, int power){
+int main(){
+    double weight;
+    double height;
 
-    int result = 1;
+    printf("%s", "Enter your weight (in kilograms) :");
+    scanf("%lf", &weight);
 
-    int i;
-    for(i = 0; i < power; i ++)
-    {
-        result *= number;
-    }
+    printf("%s", "Enter your height (in meters) :");
+    scanf("%lf", &height);
 
-    return result;
-}
+    double bmi = weight / (height * height);
 
-int main() {
-    int integer1;
-    int integer2;
+    printf("Your BMI index is, %lf\n\n", bmi);
 
-    printf("Enter first integer\n");   // prompt
-    scanf("%d", &integer1);   // read an integer
-
-    printf("Enter second integer\n");   // prompt
-    scanf("%d", &integer2);   // read an integer
-
-    int sum = integer1 + integer2;
-
-    printf("Sum is %d\n", sum);
-
-    printf("%d\n", custom_pow(5, 2));
-    printf("%d\n", custom_pow(4, 6));
-
+    puts("BMI VALUES");
+    puts("Underweight: less than 18.5");
+    puts("Normal:      between 18.5 and 24.9");
+    puts("Overweight:  between 25 and 29.9");
+    puts("Obese:       30 or greater");
 }
