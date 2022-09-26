@@ -3,22 +3,24 @@
 #include <unistd.h>
 
 int main(){
-    double weight;
-    double height;
+    int i = 1;
+    int count_of_students = 5;
 
-    printf("%s", "Enter your weight (in kilograms) :");
-    scanf("%lf", &weight);
+    double currentGrade;
+    double result = 0;
 
-    printf("%s", "Enter your height (in meters) :");
-    scanf("%lf", &height);
+    while (i <= count_of_students){
+        printf("Enter the grade of student %d :", i);
 
-    double bmi = weight / (height * height);
+        scanf("%lf", &currentGrade);
+        result += currentGrade;
 
-    printf("Your BMI index is, %lf\n\n", bmi);
+        i ++;
+    }
 
-    puts("BMI VALUES");
-    puts("Underweight: less than 18.5");
-    puts("Normal:      between 18.5 and 24.9");
-    puts("Overweight:  between 25 and 29.9");
-    puts("Obese:       30 or greater");
+    result /= count_of_students;
+
+    printf("Average grade is : %lf", result);
+
+    return 0;
 }
