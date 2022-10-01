@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <dos.h>
-#include <unistd.h>
 #include <limits.h>
 
-int main(){
-    int a = 10; // use unary plus operator
-    int b = (-a); // It does not change the operand value
-    printf (" The value of a: %d \n", a);
-    printf (" The value of b: %d \n", b);
-    return 0;
+int main(void)
+{
+    printf("%d\n", SHRT_MAX);
+    printf("%d\n", INT_MIN);
+    printf("%li\n", LONG_MIN);
+    printf("%lli\n", LONG_LONG_MAX);
 }
+
