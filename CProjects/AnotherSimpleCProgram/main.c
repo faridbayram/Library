@@ -1,44 +1,55 @@
 #include <stdio.h>
 #include <limits.h>
 
+
 int main(void)
 {
-    //int x, y, z;
-    //int entered_items_count = scanf("%d%d%d", &x, &y, &z);
+    int n = 5;
 
-    //int a;
-    //while((a = getchar()) != EOF){
-    //    printf("%d\n", a);
-    //}
-
-    unsigned int sum = 0, count = 0;
     int i;
-    for(i = 1; i <= 99; i += 2){
-        sum += i;
-        count += 1;
+    for(i = 1; i <= n; i ++)
+    {
+        int k;
+
+        for(k = i; k < n; k ++){
+            printf("%s", " ");
+        }
+
+        for(k = 1; k <= i; k ++){
+            printf("%s", "*");
+        }
+
+        for(k = 1; k < i; k ++){
+            printf("%s", "*");
+        }
+
+        for(k = i; k < n; k ++){
+            printf("%s", " ");
+        }
+
+        puts("");
     }
 
-    printf("sum is : %d\n", sum);
-    printf("count is : %d\n", count);
+    for(i = n; i >= 1; i --)
+    {
+        int k;
 
-    double d = 333.546372;
-
-    printf("right justified -> %20f\n", d);
-    printf("right justified -> %20.4f\n", d);
-    printf("left justified -> %-20.4f\n", d);
-
-
-    for(i = 1; i <= 20; i ++){
-        if(i % 5 == 0){
-            printf("%d\n", i);
+        for(k = i; k <= n; k ++){
+            printf("%s", " ");
         }
-        else{
-            printf("%d\t", i);
-        }
-    }
 
-    for (double y = 0.1; y != 1.0; y += 0.1) {
-        printf("%f\n", y);
+        for(k = i; k >= 2; k --){
+            printf("%s", "*");
+        }
+
+        for(k = i; k > 2; k --){
+            printf("%s", "*");
+        }
+
+        for(k = i; k < n; k ++){
+            printf("%s", " ");
+        }
+
+        puts("");
     }
 }
-
