@@ -1,0 +1,3 @@
+D:/LibrarySync/CProjects/PrintDiamondProject/cmake-build-debug/CMakeFiles/PrintDiamondProject.dir
+D:/LibrarySync/CProjects/PrintDiamondProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/LibrarySync/CProjects/PrintDiamondProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir

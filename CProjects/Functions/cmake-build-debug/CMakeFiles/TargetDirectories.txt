@@ -1,0 +1,3 @@
+D:/LibrarySync/CProjects/Functions/cmake-build-debug/CMakeFiles/Functions.dir
+D:/LibrarySync/CProjects/Functions/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/LibrarySync/CProjects/Functions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
