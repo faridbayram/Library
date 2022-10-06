@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    int n = 5;
+    int n = 100;
 
     int i;
     for(i = 1; i <= n; i ++)
@@ -52,4 +52,6 @@ int main(void)
 
         puts("");
     }
+
+    scanf("%d", &n);
 }
