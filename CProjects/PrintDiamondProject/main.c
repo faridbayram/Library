@@ -150,8 +150,9 @@ void srandom_without_seed(){
     {
         printf("%10d", 1 + (rand() % 6));
 
-        if(i % 5 == 0)
+        if(i % 5 == 0){
             puts("");
+        }
     }
 }
 int rollDice(void){
