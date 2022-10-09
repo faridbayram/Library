@@ -3,7 +3,6 @@
 #include <time.h>
 
 void printDiamond(int size);
-void doSmth();
 void random();
 void srandom();
 void srandom_without_seed();
@@ -58,12 +57,6 @@ int main(void)
     return 0;
 }
 
-void doSmth(){
-    int max();
-    int result = max();
-    printf("%d\n", result);
-}
-
 void printDiamond(int size){
     int i;
     for(i = 1; i <= size; i ++)
@@ -112,9 +105,7 @@ void printDiamond(int size){
         puts("");
     }
 }
-int max(){
-    return 5;
-}
+
 void random(){
     unsigned int i;
     for(i = 1; i <= 10; i ++)
