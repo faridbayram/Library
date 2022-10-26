@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <zconf.h>
+#include <synchapi.h>
 
 #define SIZE 5
 
-int main() {
-    int arr[SIZE] = {1,2,3,4,5};
+// function main begins program execution
+int main(void)
+{
+    char string[5] = {'f', 'a', 'r', 'i', 'd'};
 
-    printf("%d\n", arr[1]);
-
-    return 0;
+    printf("%s\n", string);
 }
