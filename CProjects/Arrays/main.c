@@ -1,23 +1,40 @@
 #include <stdio.h>
 
-#define SIZE 7
+#define SIZE 15
 
-void printArray(const int b[SIZE], unsigned int size);
+int binarySearch(const int b[], int searchKey, unsigned int low, unsigned int high);
 
 // function main begins program execution
 int main(void)
 {
-    const int numbers[] = {1, 2, 3, 4};
-    printArray(numbers, SIZE);
+    int a[SIZE];
 
-    int scanner;
-    //scanf("%d", &scanner);
-    return 0;
+    // create data
+    for (unsigned int i = 0; i < SIZE; ++i) {
+        a[i] = 2 * i;
+    }
+
+    int searchKey = 24;
+    int result = binarySearch(a, searchKey, 0, SIZE - 1);
+
+    printf("%d\n", result);
 }
 
-void printArray(const int b[], unsigned int size){
-    for(unsigned int i = 0; i < size; i ++)
-    {
-        printf("element at position %u is : %d\n", i, b[i]);
+int binarySearch(const int b[], int searchKey, unsigned int low, unsigned int high){
+    unsigned int middle = (low + high) / 2;
+    if(b[middle] == searchKey){
+        return middle;
     }
+
+    if(low > high){
+        return -1;
+    }
+    else if(b[middle] > searchKey){
+        high = middle - 1;
+    }
+    else{
+        low = middle + 1;
+    }
+
+    return binarySearch(b, searchKey, low, high);
 }
