@@ -1,20 +1,10 @@
 #include <stdio.h>
 
-void printCharacters(const char *sPtr)
-{
-    for (; *sPtr != '\0'; ++sPtr) { // no initialization
-        printf("%c", *sPtr);
-    }
-}
-
 int main() {
-    int x;
-    int y;
+    int n;
+    printf("enter the length of array : ");
+    scanf("%d", &n);
 
-    const int *const ptr;
-
-    int size = sizeof ptr;
-    printf("size of address(ptr) for this machine is : %d", size);
+    int arr[n];
+    printf("%llu", sizeof(arr));
 }
-
-
