@@ -5,7 +5,9 @@
 int main() {
     FILE* cfPtr;
 
-    if((cfPtr = fopen("clients.txt", "w")) == NULL){
+    char asdf[20] = "clientsss.txt";
+
+    if((cfPtr = fopen(asdf, "w")) == NULL){
         puts("File could not be opened");
     }
     else{
